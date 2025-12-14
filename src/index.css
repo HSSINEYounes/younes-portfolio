@@ -3,7 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* stylelint-enable at-rule-no-unknown */
+body {
+  font-family: 'Inter', sans-serif;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
