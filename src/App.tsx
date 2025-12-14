@@ -2,7 +2,7 @@ import { GREETING, EXPERIENCE_DATA, PROJECTS_DATA, SKILLS_DATA } from './data/po
 import React from 'react';
 
 // =======================================================
-// 1. NAV BAR COMPONENT (fixed navigation)
+// 1. NAV BAR COMPONENT (Fixed Navigation)
 // =======================================================
 const NavBar: React.FC = () => (
   <nav className="sticky top-0 z-50 bg-white shadow-lg border-b-2 border-gray-100">
@@ -26,7 +26,6 @@ const NavBar: React.FC = () => (
 const HeroSection: React.FC = () => (
     <header className="py-24 md:py-36 text-center bg-gray-950 text-white shadow-2xl">
       <div className="container mx-auto px-4">
-        {/* Titre avec effet de gradient pour plus de dynamisme */}
         <h1 className="text-6xl md:text-8xl font-extrabold tracking-tighter mb-4 
                        text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
           {GREETING.title}
@@ -34,7 +33,6 @@ const HeroSection: React.FC = () => (
         <h2 className="text-2xl md:text-4xl font-medium text-gray-300 mb-8">
           {GREETING.tagline}
         </h2>
-        {/* Résumé mis en évidence */}
         <p className="max-w-5xl mx-auto text-xl text-gray-400 border-t border-gray-800 pt-6">
           {GREETING.summary}
         </p>
@@ -56,7 +54,8 @@ const SkillsSection: React.FC = () => (
             Stack Technique
         </h3>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Force l'affichage en grille sur tous les appareils */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {Object.entries(SKILLS_DATA).map(([category, skills]) => (
             <div key={category} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
               <h4 className="text-xl font-bold capitalize text-blue-700 mb-4 border-b-2 pb-2">
@@ -86,17 +85,17 @@ const ExperienceSection: React.FC = () => (
         </h3>
         
         <div className="relative max-w-4xl mx-auto">
-            {/* Conteneur de la timeline */}
             
             {EXPERIENCE_DATA.map((exp, index) => (
+                // L'espacement py-6 assure la distance entre les points de la timeline
                 <div key={exp.id} className="relative pl-12 py-6">
-                    {/* Ligne verticale */}
+                    {/* Ligne verticale : ml-4 pour l'aligner avec le point */}
                     <div className="absolute top-0 left-0 w-1 h-full bg-cyan-200 ml-4"></div>
                     
-                    {/* Point sur la timeline */}
-                    <div className="absolute top-8 left-0 h-4 w-4 bg-cyan-600 rounded-full border-4 border-white"></div>
+                    {/* Point : z-10 pour s'assurer qu'il est au-dessus de la ligne */}
+                    <div className="absolute top-8 left-0 h-4 w-4 bg-cyan-600 rounded-full border-4 border-white z-10"></div>
                     
-                    {/* Contenu de la carte d'expérience */}
+                    {/* Contenu : ml-4 pour se décaler de la ligne verticale */}
                     <div className="bg-gray-50 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 ml-4">
                         <div className="flex justify-between items-center mb-2">
                             <h4 className="text-2xl font-bold text-gray-900">{exp.role}</h4>
@@ -111,14 +110,14 @@ const ExperienceSection: React.FC = () => (
                             ))}
                         </div>
                         
-                        {/* Réalisations (mise en avant des chiffres) */}
+                        {/* Réalisations - Correction des SVG de coche */}
                         <ul className="list-none mt-4 text-gray-700 space-y-2">
                             {exp.achievements.map((ach, i) => (
                                 <li key={i} className="flex items-start">
-                                    <span className="text-cyan-500 mr-3 mt-1">
+                                    <span className="text-cyan-500 mr-3 mt-1 flex-shrink-0">
+                                        {/* w-4 h-4 doit fonctionner si Tailwind est bien configuré */}
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                                     </span>
-                                    {/* Utilisation de dangerouslySetInnerHTML pour le Markdown (ex: **50 000**) */}
                                     <span dangerouslySetInnerHTML={{ __html: ach }} />
                                 </li>
                             ))}
@@ -139,6 +138,7 @@ const ProjectsSection: React.FC = () => (
         <h3 className="text-4xl font-extrabold text-gray-900 mb-12 text-center border-b-4 border-cyan-100 pb-4">
             Projets Clés (Proof of Work)
         </h3>
+        {/* Force l'affichage en grille sur tous les appareils */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PROJECTS_DATA.map(project => (
                 <a key={project.name} href={project.githubUrl} target="_blank" rel="noopener noreferrer" 
@@ -182,15 +182,17 @@ const FooterSection: React.FC = () => (
 // =======================================================
 const App: React.FC = () => {
   return (
+    // 'antialiased' pour une meilleure clarté du texte
     <div className="min-h-screen bg-gray-50 antialiased">
       
       <NavBar />
       <HeroSection />
       
       <main>
+          {/* Ordre des sections légèrement modifié pour plus de clarté */}
           <ExperienceSection />
-          <SkillsSection />
           <ProjectsSection />
+          <SkillsSection />
       </main>
 
       <FooterSection />
