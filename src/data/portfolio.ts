@@ -27,7 +27,8 @@ type Project = {
 export const GREETING = {
     title: "Younes Hssine",
     tagline: "Ingénieur Full Stack React & Laravel (Mention Très Bien)",
-    summary: "Ingénieur diplômé de l'EMSI, spécialisé en ReactJS, Typescript et Laravel. Mon objectif est de concevoir des architectures Microservices performantes et scalables, ayant déjà géré plus de 50 000 dossiers patients et optimisé les flux de développement de 20%."[cite_start]// [cite: 2, 3, 4]
+    // CORRIGÉ: Suppression des marqueurs et
+    summary: "Ingénieur diplômé de l'EMSI, spécialisé en ReactJS, Typescript et Laravel. Mon objectif est de concevoir des architectures Microservices performantes et scalables, ayant déjà géré plus de 50 000 dossiers patients et optimisé les flux de développement de 20%",
 };
 
 // =================================================================
@@ -61,7 +62,6 @@ export const SKILLS_DATA = {
 
 // =================================================================
 // 3. EXPÉRIENCES PROFESSIONNELLES
-// (Les métriques quantifiées sont cruciales ici)
 // =================================================================
 export const EXPERIENCE_DATA: Experience[] = [
     {
@@ -71,10 +71,11 @@ export const EXPERIENCE_DATA: Experience[] = [
         duration: "Mars 2024 - Septembre 2024",
         stack: ["Laravel", "ReactJS", "Typescript", "MySQL", "Agile/Scrum"],
         achievements: [
-            [cite_start]"Conçu et implémenté une architecture backend Laravel capable de traiter plus de **50 000 dossiers patients**[cite: 34].",
-            [cite_start]"Intégré un moteur de détection de doublons (MySQL), garantissant une **fiabilité des données de 99,5%**[cite: 35].",
-            [cite_start]"Refondu l'interface ReactJS via une approche modulaire, accélérant la livraison des futures fonctionnalités de **20%**[cite: 36].",
-            [cite_start]"Automatisé des workflows critiques (intégration FM), réduisant le temps de traitement manuel pour l'équipe Opérations de **3 heures par semaine**[cite: 37].",
+            // CORRIGÉ: Suppression des marqueurs et
+            "Conçu et implémenté une architecture backend Laravel capable de traiter plus de **50 000 dossiers patients**.",
+            "Intégré un moteur de détection de doublons (MySQL), garantissant une **fiabilité des données de 99,5%**.",
+            "Refondu l'interface ReactJS via une approche modulaire, accélérant la livraison des futures fonctionnalités de **20%**.",
+            "Automatisé des workflows critiques (intégration FM), réduisant le temps de traitement manuel pour l'équipe Opérations de **3 heures par semaine**.",
         ],
     },
     {
@@ -84,8 +85,9 @@ export const EXPERIENCE_DATA: Experience[] = [
         duration: "Juillet - Octobre 2023",
         stack: ["Python", "Django"],
         achievements: [
-            [cite_start]"Développé une application web de gestion des employés en **Python/Django**[cite: 43].",
-            [cite_start]"Implémenté un système d'évaluation basé sur 5 critères clés et un module de planification de carrière[cite: 44].",
+            // CORRIGÉ: Suppression des marqueurs et
+            "Développé une application web de gestion des employés en **Python/Django**.",
+            "Implémenté un système d'évaluation basé sur 5 critères clés et un module de planification de carrière.",
         ],
     },
     // ... autres expériences (2022)
@@ -93,12 +95,12 @@ export const EXPERIENCE_DATA: Experience[] = [
 
 // =================================================================
 // 4. PROJETS ACADÉMIQUES
-// (Mise en avant de l'architecture Microservices)
 // =================================================================
 export const PROJECTS_DATA: Project[] = [
     {
         name: "Plateforme Full-Stack de Livraison et Suivi de Colis",
-        [cite_start]description: "Plateforme complète démontrant l'application des principes d'une **architecture Microservices** pour la scalabilité.", // [cite: 53, 55]
+        // CORRIGÉ: Suppression du marqueur devant 'description'
+        description: "Plateforme complète démontrant l'application des principes d'une **architecture Microservices** pour la scalabilité.",
         techStack: "ReactJS, Spring Boot",
         githubUrl: "https://github.com/VOTRE_UTILISATEUR/colis-microservices",
     },
