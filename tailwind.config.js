@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'yale': '#005a9c',
+      }
     },
     container: {
         center: true,
