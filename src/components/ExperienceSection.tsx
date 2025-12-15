@@ -6,7 +6,7 @@ const ExperienceSection: React.FC = () => {
     const { t } = useTheme();
 
     return (
-        <section id="experience" className="container mx-auto px-6 py-16 bg-white dark:bg-gray-800 overflow-x-hidden">
+        <section id="experience" className="container mx-auto px-6 py-16 bg-white dark:bg-gray-800 overflow-x-hidden overflow-y-hidden">
             <h3 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-12 text-center border-b-4 border-cyan-100 dark:border-cyan-600 pb-4" data-aos="fade-up">
                 {t({ fr: "Expériences Professionnelles", en: "Professional Experience" })}
             </h3>
