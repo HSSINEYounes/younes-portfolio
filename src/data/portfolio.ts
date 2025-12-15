@@ -63,8 +63,8 @@ export const GREETING = {
         en: "Full Stack Engineer React & Laravel (Distinction: Very Good)"
     },
     summary: {
-        fr: "Ingénieur diplômé de l'EMSI, spécialisé en ReactJS, Typescript et Laravel. Mon objectif est de concevoir des architectures Microservices performantes et scalables, ayant déjà géré plus de 50 000 dossiers patients et optimisé les flux de développement de 20%",
-        en: "EMSI graduate engineer, specialized in ReactJS, Typescript, and Laravel. My goal is to design high-performance and scalable Microservice architectures, having already managed over 50,000 patient records and optimized development workflows by 20%"
+        fr: "Ingénieur diplômé de l'EMSI, spécialisé en ReactJS, Typescript et Laravel. Mon objectif est de concevoir des **systèmes robustes et évolutifs (scalables)**, ayant déjà géré et sécurisé le flux de plus de 50,000 enregistrements critiques et optimisé les flux de développement de 20%.",
+        en: "EMSI graduate engineer, specialized in ReactJS, Typescript, and Laravel. My goal is to design **robust and scalable systems**, having already managed and secured the flow of over 50,000 critical records and optimized development workflows by 20%."
     },
 };
 
@@ -73,7 +73,7 @@ export const SKILLS_DATA = {
         { name: "ReactJS", level: { fr: "Expert", en: "Expert" } },
         { name: "TypeScript", level: { fr: "Expert", en: "Expert" } },
         { name: "Hooks Personnalisés", level: { fr: "Expert", en: "Expert" } },
-        { name: "Tests (Jest/RTL)", level: { fr: "Avancé", en: "Advanced" } },
+        { name: "Tests (Jest)", level: { fr: "Avancé", en: "Advanced" } },
         { name: "Angular", level: { fr: "Avancé", en: "Advanced" } },
         { name: "Tailwind CSS", level: { fr: "Avancé", en: "Advanced" } },
         { name: "JavaScript", level: { fr: "Expert", en: "Expert" } }

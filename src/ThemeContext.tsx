@@ -1,5 +1,3 @@
-// src/ThemeContext.tsx (Anciennement LanguageContext.tsx)
-
 import React, { createContext, useState, useContext, type ReactNode, useEffect } from 'react';
 
 type Language = 'fr' | 'en';
@@ -26,7 +24,6 @@ const ThemeContext = createContext<ThemeContextType>(defaultContextValue);
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    // 1. GESTION DE LA LANGUE
     const [language, setLanguage] = useState<Language>(
         (localStorage.getItem('lang') as Language) || 'fr'
     );
@@ -37,15 +34,11 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     const t = (text: { fr: string, en: string }): string => {
         return text[language];
     };
-
-    // 2. GESTION DU THÈME
     const [theme, setTheme] = useState<Theme>(
         (localStorage.getItem('theme') as Theme) || 'light'
     );
-
-    // Effet pour appliquer/retirer la classe 'dark' au <body>
     useEffect(() => {
-        const body = document.documentElement; // Utilisez document.documentElement pour la compatibilité
+        const body = document.documentElement;
         if (theme === 'dark') {
             body.classList.add('dark');
         } else {
