@@ -407,16 +407,13 @@ const NavBar: React.FC = () => {
 // =======================================================
 const HeroSection: React.FC = () => {
     const { t, theme } = useTheme(); // <--- Nous utilisons maintenant le 'theme'
-    const profileImagePath = theme === 'dark' 
-        ? `${BASE_URL}younes-photo-dark.png` // Le chemin vers l'image DARK
-        : `${BASE_URL}younes-photo.jpeg`;
+
     return (
         <header id="top" className="py-24 md:py-5 text-center bg-gray-950 text-white shadow-2xl">
         <div className="mb-8 flex justify-center" data-aos="fade-down">
-            
             <img 
                 // Correction du chemin d'accès avec BASE_URL
-                src={profileImagePath}
+                src={`${BASE_URL}younes-photo.jpeg`}
                 alt="Portrait de Younes Hssine, Ingénieur Full Stack" 
                 className="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-cyan-500 object-cover shadow-2xl"
             />
