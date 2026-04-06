@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
             {t(GREETING.summary)}
             </p>
             <a 
-            href={`${BASE_URL}Younes_Hssine_CV.pdf`} 
+            href={`${BASE_URL}younes_HSSINE-CV.pdf`} 
             download
             className="bg-transparent w-full md:w-auto text-white border-2 border-cyan-500 font-extrabold py-3 px-8 rounded-lg shadow-md hover:bg-cyan-500 hover:text-gray-900 transition duration-300 block md:inline-block mt-5"
             data-aos="zoom-in" data-aos-delay="400"
