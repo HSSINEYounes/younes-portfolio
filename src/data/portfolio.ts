@@ -101,6 +101,35 @@ export const SKILLS_DATA = {
 export const EXPERIENCE_DATA: Experience[] = [
     {
         id: 1,
+        company: { fr: "Indépendant", en: "Independent" },
+        role: { fr: "Ingénieur Full-Stack", en: "Full-Stack Engineer" },
+        duration: "2024 - Présent",
+        stack: ["ReactJS", "Laravel", "Node.js", "TypeScript", "FFmpeg", "Shopify API", "MySQL", "Agile"],
+        achievements: [
+            {
+                fr: "TarteelSpace : Plateforme SaaS de génération vidéo automatisée synchronisant audio (multi-récitants), texte, Tafsir et traductions via Node.js/FFmpeg.",
+                en: "TarteelSpace: Automated video SaaS platform synchronizing audio (multi-reciters), text, Tafsir, and translations using Node.js/FFmpeg."
+            },
+            {
+                fr: "Portail Expert-Comptable : Interface B2B de gestion de projets, suivi des délais de paiement et automatisation des relances clients.",
+                en: "Accounting Portal: B2B project management interface, payment tracking, and automated client reminders."
+            },
+            {
+                fr: "AkalGeo : Développement d'un jeu interactif haute performance (React/Globe.gl) avec gestion d'état complexe et modes multi-jeux.",
+                en: "AkalGeo: High-performance interactive game (React/Globe.gl) featuring complex state management and multiple game modes."
+            },
+            {
+                fr: "SaaS Shopify : Conception d'applications d'optimisation e-commerce et intégration d'API pour la gestion des flux marchands.",
+                en: "Shopify SaaS: E-commerce optimization apps and API integration for merchant workflow management."
+            },
+            {
+                fr: "Expertise Backend : Architecture Laravel traitant +50 000 dossiers patients avec un moteur de détection de doublons (fiabilité 99,5%).",
+                en: "Backend Expertise: Laravel architecture processing 50,000+ patient records with a duplicate detection engine (99.5% reliability)."
+            }
+        ],
+    },
+    {
+        id: 2,
         company: { fr: "MasaratApp, Témara", en: "MasaratApp, Témara" },
         role: { fr: "Développeur Full Stack (Stage PFE)", en: "Full Stack Developer (Final Project Internship)" },
         duration: "Mars 2024 - Septembre 2024",
@@ -125,7 +154,7 @@ export const EXPERIENCE_DATA: Experience[] = [
         ],
     },
     {
-        id: 2,
+        id: 3,
         company: { fr: "Ménara Holding, Marrakech", en: "Ménara Holding, Marrakech" },
         role: { fr: "Développeur (Stage de fin d'année)", en: "Developer (End-of-Year Internship)" },
         duration: "Juillet - Octobre 2023",
@@ -142,7 +171,7 @@ export const EXPERIENCE_DATA: Experience[] = [
         ],
     },
     {
-        id: 3,
+        id: 4,
         company: { fr: "Ménara Holding, Marrakech", en: "Ménara Holding, Marrakech" },
         role: { fr: "Développeur (Stage de fin d'année)", en: "Developer (End-of-Year Internship)" },
         duration: "Juillet - Octobre 2022",

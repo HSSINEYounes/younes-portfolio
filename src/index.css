@@ -27,3 +27,24 @@
 body {
   overflow-x: hidden;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  /* Ajuster la hauteur de la scrollbar horizontale */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(156 163 175 / 0.5);
+  /* Couleur gris/semi-transparent */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Masquer la scrollbar sous Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(156 163 175 / 0.5) transparent;
+}
